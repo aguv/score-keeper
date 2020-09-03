@@ -6,6 +6,9 @@ let buttonPlayer2 = document.getElementById("button2");
 let buttonRestart = document.getElementById("restart-button");
 let player1Header = document.getElementById("header-player1");
 let player2Header = document.getElementById("header-player2");
+let body = document.getElementById("body");
+let nameP1 = document.getElementById("nameP1");
+let nameP2 = document.getElementById("nameP2");
 document.getElementById("input-howmany").value = 1;
 let p1Score = 0;
 let p2Score = 0;
@@ -61,3 +64,9 @@ buttonPlayer2.addEventListener("click", () => {
 
 buttonRestart.addEventListener("click", restartFunc);
 
+(function(){
+    let nombreP1 = prompt("Nombre del jugador uno: ");
+    let nombreP2 = prompt("Nombre del jugador dos: ");
+    nameP1.textContent = nombreP1;
+    nameP2.textContent = nombreP2;
+})();
